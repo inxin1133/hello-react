@@ -1,23 +1,25 @@
 import React, {Component} from 'react';
+// import logo from './logo.svg';
+import './App.css';
+import Customer from './components/Customer';
 
-import MyComponent from './MyComponent';
-import MyComponentCheck from './MyConponentCheck';
-
+const customer = {
+    'name': '임꺽정',
+    'birthday': '230830',
+    'gender': '남',
+    'job': '의적',
+}
 
 class App extends Component {
     render() {
-
-    
-        
-
         return (    
            
-               
-            <MyComponentCheck name="김수안무" />
-            //<MyComponent name='React' age={6} />                  
-            // 문자열 종류 외의 값을 컴포넌트에 전달할 때는  { }로 감싸야 합니다. 안그럼 오류남    
-            // <MyComponent name={3} /> -> 오류없음
-            //  <MyComponent name=3 /> -> 오류발생
+            <Customer 
+                name={customer.name}
+                birthday={customer.birthday}
+                gender={customer.gender}
+                job={customer.job}
+            />
         );
     }
 }

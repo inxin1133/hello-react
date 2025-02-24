@@ -1,5 +1,6 @@
 # RainSys React 배우기
 본 프로젝트는 리액트를 배우기 위한 목적으로 만들어진 시스템 입니다. 
+본 내용은 학습을 위해 작성되었습니다. 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
