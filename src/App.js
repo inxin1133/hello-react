@@ -1,25 +1,58 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 // import logo from './logo.svg';
 import './App.css';
 import Customer from './components/Customer';
+import Profileimg from './img/logo_jump_frog.svg'
 
-const customer = {
-    'name': '임꺽정',
-    'birthday': '230830',
-    'gender': '남',
-    'job': '의적',
-}
+
+
+const customers = [
+    {
+        'id': 1,
+        'image': Profileimg,
+        'name': '홍길동',
+        'birthday': '230830',
+        'gender': '남',
+        'job': '의적',
+    },
+    {
+        'id': 2,
+        'image': Profileimg,
+        'name': '임꺽정',
+        'birthday': '230830',
+        'gender': '남',
+        'job': '의적',
+    },
+    {
+        'id': 3,
+        'image': Profileimg,
+        'name': '장길산',
+        'birthday': '230830',
+        'gender': '남',
+        'job': '의적',
+    }
+]
 
 class App extends Component {
     render() {
-        return (    
-           
-            <Customer 
-                name={customer.name}
-                birthday={customer.birthday}
-                gender={customer.gender}
-                job={customer.job}
-            />
+        return (
+            <div>
+                {
+                    customers.map(c => {
+                        return (
+                            <Customer
+                                key={c.id}
+                                id={c.id}
+                                image={c.image}
+                                name={c.name}
+                                birthday={c.birthday}
+                                gender={c.gender}
+                                job={c.job}
+                            />
+                        )
+                    })
+                }
+            </div>
         );
     }
 }
